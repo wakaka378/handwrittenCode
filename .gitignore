@@ -1,0 +1,9 @@
+# 忽略文件
+.idea/
+.DS_Store
+node_modules
+*.log
+.vscode
+tmp
+dist
+**/.keys
