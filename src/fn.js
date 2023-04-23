@@ -288,7 +288,6 @@ function shallowCopy(obj) {
       newObj[key] = obj[key]
     }
   }
-
   return newObj
 }
 
