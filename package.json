@@ -4,14 +4,13 @@
   "description": "",
   "main": "index.js",
   "type": "commonjs",
-  "dependencies": {},
   "scripts": {
     "lint": "prettier --write --cache ./src && eslint --fix . --ext .js,.ts,.vue ./src",
     "prepare": "husky install",
     "commit": "cz"
   },
   "lint-staged": {
-    "*.{js,ts，vue}": "npm run lint"
+    "*.{js,ts}": "npm run lint"
   },
   "keywords": [],
   "author": "",
@@ -36,7 +35,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "node_modules/cz-customizable"
+      "path": "./node_modules/cz-customizable"
     }
   }
 }

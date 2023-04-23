@@ -154,7 +154,6 @@ function format1(num) {
   let decimals = ''
   // 获取小数
   str.includes('.') ? (decimals = str.split('.')[1]) : decimals
-
   // 长度是否超过3
   if (len <= 3) {
     return num

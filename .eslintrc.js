@@ -12,6 +12,6 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
-    // 'no-prototype-builtins': 'off',
+    'no-prototype-builtins': 'off',
   },
 }
