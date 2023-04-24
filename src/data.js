@@ -154,6 +154,7 @@ function format1(num) {
   let decimals = ''
   // 获取小数
   str.includes('.') ? (decimals = str.split('.')[1]) : decimals
+
   // 长度是否超过3
   if (len <= 3) {
     return num
@@ -161,7 +162,6 @@ function format1(num) {
     // 判断是否为 3 的倍数
     let remainder = len % 3
 
-    let temp = ''
     // 不是 3 的整倍数
     if (remainder > 0) {
       //  则根据数字长度对字符串进行拆分，每3位一组，最后再用逗号拼接起来
@@ -173,13 +173,14 @@ function format1(num) {
       const surplus = str.slice(remainder, len).match(/\d{3}/g)
 
       // 组合起来  第一位后面加上 ,  顺便带上小数
-      return firstNum + ',' + surplus + temp + '.' + decimals
+      return firstNum + ',' + surplus + '.' + decimals
     } else {
       // 是 3 的倍数 上面操作去掉第一位数据操作就是  直接用正则匹配数据 然后 join 拼接 , 顺便带上小数
       return str.match(/\d{3}/g).join(',') + '.' + decimals
     }
   }
 }
+
 // console.log('format(123456)', format1(123456.12))
 
 // let arr = [1, 2, 3]
